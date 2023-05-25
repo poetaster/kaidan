@@ -53,6 +53,7 @@ BuildRequires:  cmake(Qt5Svg)
 BuildRequires:  cmake(Qt5Widgets)
 BuildRequires:  cmake(Qt5Xml)
 BuildRequires:  cmake(ZXing) >= 1.0.8
+#zxing-cpp-devel
 Requires:       kirigami2 >= 5.67.0
 Requires:       libqt5-qtquickcontrols2
 
