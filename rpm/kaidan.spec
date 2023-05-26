@@ -24,7 +24,7 @@ Summary:        A XMPP client based on KDE Framework
 License:        GPL-3.0-or-later AND SUSE-GPL-3.0+-with-openssl-exception AND MIT AND AML AND CC-BY-SA-4.0
 URL:            https://www.kaidan.im
 Source:         kaidan-%{version}.tar.xz
-Source2         org.kde.kaidan.png
+Source2:        org.kde.kaidan.png
 
 # PATCH-FIX-UPSTREAM
 Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
