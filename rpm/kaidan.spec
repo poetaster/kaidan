@@ -24,15 +24,19 @@ Summary:        A XMPP client based on KDE Framework
 License:        GPL-3.0-or-later AND SUSE-GPL-3.0+-with-openssl-exception AND MIT AND AML AND CC-BY-SA-4.0
 URL:            https://www.kaidan.im
 Source:         kaidan-%{version}.tar.xz
+Source4         org.kde.kaidan.png
+
 # PATCH-FIX-UPSTREAM
 Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
 # PATCH-FIX-UPSTREAM
 Patch1:         0001-QrCodeGenerator-Replace-deprecated-BarcodeFormat-QR_.patch
 # PATCH-FIX-UPSTREAM
 Patch2:         0001-Support-ZXing-2.0.patch
+# SFOS
+Patch3:         0001-remove-qq2-desktop-style.patch
+
 BuildRequires:  cmake >= 3.3
 BuildRequires:  extra-cmake-modules >= 5.40.0
-BuildRequires:  update-desktop-files
 BuildRequires:  gcc-c++
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  opt-kf5-rpm-macros >= %{kf5_version}
@@ -62,27 +66,45 @@ Kirigami and QtQuick. The back-end of Kaidan is entirely written in C++
 using the qxmpp XMPP client library and Qt 5.
 
 %prep
-%autosetup -p1
+%autosetup -n %{name}-%{version}/upstream -p1
 
 %build
-%cmake_kf5 -d build '-DI18N:BOOL=ON' '-DQUICK_COMPILER:BOOL=ON'
-%cmake_build
+export QTDIR=%{_opt_qt5_prefix}
+touch .git
+
+mkdir -p build
+pushd build
+
+%_opt_cmake_kf5 ../ \
+		-DKDE_INSTALL_BINDIR:PATH=/usr/bin \
+		-DCMAKE_INSTALL_PREFIX:PATH=/usr/ \
+        -DI18N:BOOL=ON \
+        -DQUICK_COMPILER:BOOL=ON
+
+%make_build
+popd
 
 %install
-%kf5_makeinstall -C build
-%suse_update_desktop_file im.kaidan.kaidan
+pushd build
+make DESTDIR=%{buildroot} install
+popd
+
+desktop-file-install --dir=%{buildroot}%{_datadir}/applications/ %{buildroot}/%{_datadir}/applications/org.kde.%{name}.desktop
+
+install -p -m644 -D %{SOURCE4} \
+	%{buildroot}/%{_datadir}/icons/hicolor/256x256/apps/org.kde.%{name}.png
 
 %files
 %license LICENSE
 %doc README.md NEWS
-%dir %{_kf5_sharedir}/%{name}
-%{_kf5_applicationsdir}/im.kaidan.kaidan.desktop
-%{_kf5_appstreamdir}/im.kaidan.kaidan.appdata.xml
-%{_kf5_bindir}/%{name}
-%{_kf5_iconsdir}/hicolor/*/apps/%{name}.*
-%{_kf5_notifydir}/kaidan.notifyrc
-%{_kf5_sharedir}/%{name}/images
-%{_kf5_sharedir}/%{name}/servers.json
+%dir %{_opt_kf5_sharedir}/%{name}
+%{_opt_kf5_applicationsdir}/im.kaidan.kaidan.desktop
+%{_opt_kf5_appstreamdir}/im.kaidan.kaidan.appdata.xml
+%{_opt_kf5_bindir}/%{name}
+%{_opt_kf5_iconsdir}/hicolor/*/apps/%{name}.*
+%{_opt_kf5_notifydir}/kaidan.notifyrc
+%{_opt_kf5_sharedir}/%{name}/images
+%{_opt_kf5_sharedir}/%{name}/servers.json
 
 %changelog
 
