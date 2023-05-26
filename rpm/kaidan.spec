@@ -45,7 +45,7 @@ BuildRequires:  opt-kf5-kirigami2-devel
 BuildRequires:  opt-kf5-kirigami-addons-dateandtime
 BuildRequires:  opt-kf5-rpm-macros
 BuildRequires:  opt-kpublictransport-devel
-BuildRequires:  qqc2-breeze-stylea
+#BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-knotifications
 BuildRequires:  opt-kf5-libqxmpp 
 BuildRequires:  opt-qt5-qtdeclarative-devel
