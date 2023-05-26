@@ -1,0 +1,21 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 123c36a5..1346ccb9 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -95,16 +95,6 @@ if(USE_KNOTIFICATIONS)
+ 	add_definitions(-DHAVE_KNOTIFICATIONS)
+ endif()
+ 
+-# Optional QWidget style integration (not on mobile)
+-if(NOT UBUNTU_TOUCH AND NOT ANDROID AND NOT IOS)
+-	find_package(Qt5Widgets)
+-	find_package(KF5QQC2DesktopStyle)
+-	set_package_properties(Qt5Widgets PROPERTIES
+-		DESCRIPTION "Integration with QWidget based desktop styles"
+-		TYPE OPTIONAL
+-	)
+-endif()
+-
+ # Platform-specific
+ if(Qt5Widgets_FOUND)
+ 	add_definitions(-DHAVE_QWIDGETS -DQAPPLICATION_CLASS=QApplication)
