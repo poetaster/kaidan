@@ -27,11 +27,11 @@ Source:         kaidan-%{version}.tar.xz
 Source2:        org.kde.kaidan.png
 
 # PATCH-FIX-UPSTREAM
-Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
+#Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
 # PATCH-FIX-UPSTREAM
-Patch1:         0001-QrCodeGenerator-Replace-deprecated-BarcodeFormat-QR_.patch
+#Patch1:         0001-QrCodeGenerator-Replace-deprecated-BarcodeFormat-QR_.patch
 # PATCH-FIX-UPSTREAM
-Patch2:         0001-Support-ZXing-2.0.patch
+#Patch2:         0001-Support-ZXing-2.0.patch
 # SFOS
 Patch3:         0001-remove-qq2-desktop-style.patch
 
