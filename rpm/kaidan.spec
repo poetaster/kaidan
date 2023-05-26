@@ -55,7 +55,7 @@ BuildRequires:  opt-qt5-qtbase-gui
 BuildRequires:  opt-qca-qt5-devel
 BuildRequires:  opt-qt5-qtsvg-devel
 BuildRequires:  opt-qt5-qtmultimedia-devel
-BuildRequires:  opt-qt5-qtlocation
+BuildRequires:  opt-qt5-qtlocation-devel
 #BuildRequires:  cmake(Qt5Positioning)
 BuildRequires:  zxing-cpp-devel
 Requires:       opt-qt5-qtquickcontrols2
