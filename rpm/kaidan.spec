@@ -47,7 +47,6 @@ BuildRequires:  opt-kf5-rpm-macros
 BuildRequires:  opt-kpublictransport-devel
 #BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-knotifications
-BuildRequires:  opt-kf5-libqxmpp-devel
 BuildRequires:  opt-qt5-qtdeclarative-devel
 BuildRequires:  opt-qt5-qtquickcontrols2-devel
 BuildRequires:  opt-qt5-qtbase-devel
