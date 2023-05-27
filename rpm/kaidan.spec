@@ -10,6 +10,10 @@ URL:            https://www.kaidan.im
 Source:         kaidan-%{version}.tar.xz
 Source2:        org.kde.kaidan.png
 
+%global __requires_exclude ^libQXmppQt5.*$
+%global __requires_exclude ^libQXmppOmemoQt5.*$
+%global __requires_exclude ^libqca-qt5.*$
+
 # PATCH-FIX-UPSTREAM
 #Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
 # PATCH-FIX-UPSTREAM
@@ -49,9 +53,7 @@ BuildRequires:  opt-kf5-kcoreaddons-devel
 BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
 BuildRequires:  opt-kf5-kquickimageeditor-devel
-BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  opt-kf5-libqxmpp-devel
-
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires:       opt-kf5-kquickimageeditor
