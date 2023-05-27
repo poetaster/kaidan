@@ -57,6 +57,7 @@ BuildRequires:  opt-qt5-qtmultimedia-devel
 BuildRequires:  opt-qt5-qtlocation-devel
 BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue2
+BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 
 Requires:       opt-qt5-qtquickcontrols2
 BuildRequires:  opt-kf5-knotifications
