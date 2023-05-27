@@ -40,7 +40,6 @@ BuildRequires:  extra-cmake-modules >= 5.40.0
 BuildRequires:  gcc-c++
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  opt-kf5-rpm-macros >= %{kf5_version}
-
 BuildRequires:  opt-kf5-kirigami2-devel
 BuildRequires:  opt-kf5-kirigami-addons-dateandtime
 BuildRequires:  opt-kf5-rpm-macros
@@ -59,9 +58,21 @@ BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue2
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 BuildRequires:  opt-qt5-qtlocation-pos-positionpoll
+BuildRequires:  opt-kf5-kcodecs-devel
+BuildRequires:  opt-kf5-kio-devel
+BuildRequires:  opt-kf5-kconfig-devel
+BuildRequires:  opt-kf5-kcoreaddons-devel
+BuildRequires:  opt-kf5-ki18n-devel
+BuildRequires:  opt-kf5-kitemmodels-devel
 
+
+%{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires:       opt-qt5-qtquickcontrols2
-BuildRequires:  opt-kf5-knotifications
+Requires:       opt-kf5-kconfig-gui
+Requires:       opt-kf5-kirigami2
+Requires:       opt-kf5-kirigami-addons
+Requires:       opt-kf5-kcoreaddons
+Requires:       qt-runner
 Requires:       opt-kf5-libqxmpp 
 Requires:       opt-qt5-qtmultimedia
 Requires:       opt-qt5-qtlocation
