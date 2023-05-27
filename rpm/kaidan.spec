@@ -49,6 +49,7 @@ BuildRequires:  opt-kf5-kcoreaddons-devel
 BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
 BuildRequires:  opt-kf5-kquickimageeditor-devel
+BuildRequires:  opt-kf5-libqxmpp-devel
 
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
