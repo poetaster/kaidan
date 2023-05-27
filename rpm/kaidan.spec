@@ -55,15 +55,13 @@ BuildRequires:  opt-qca-qt5-devel
 BuildRequires:  opt-qt5-qtsvg-devel
 BuildRequires:  opt-qt5-qtmultimedia-devel
 BuildRequires:  opt-qt5-qtlocation-devel
-BuildRequires:  opt-qt5-qtlocation-pos-geoclue-devel
 BuildRequires:  zxing-cpp-devel
+BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 
 Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-libqxmpp 
-Requires:       opt-qt5-qtsvg
 Requires:       opt-qt5-qtmultimedia
 Requires:       opt-qt5-qtlocation
-Requires:       opt-qt5-qtlocation-pos-geoclue
 
 %description
 Kaidan is a simple Jabber/XMPP client providing a user-interface using
