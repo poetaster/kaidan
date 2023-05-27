@@ -48,9 +48,11 @@ BuildRequires:  opt-kf5-kconfig-devel
 BuildRequires:  opt-kf5-kcoreaddons-devel
 BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
+BuildRequires:  opt-kf5-kquickimageeditor
 
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
+Requires:       opt-kf5-kquickimageeditor
 Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-kconfig-gui
 Requires:       opt-kf5-kirigami2
