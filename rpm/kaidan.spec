@@ -113,6 +113,7 @@ install -p -m644 -D %{SOURCE2} \
 %license LICENSE
 %doc README.md NEWS
 %dir %{_datadir}/%{name}
+%dir %{_datadir}/knotifications5
 %{_bindir}/%{name}
 %{_datadir}/applications/im.kaidan.kaidan.desktop
 %{_datadir}/icons/hicolor/128x128/apps/*.png
@@ -120,7 +121,7 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/%{name}/images
 %{_datadir}/%{name}/servers.json
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
-%{_datadir}/%{name}/kaidan.notifyrc
+%{_datadir}/knotifications5/kaidan.notifyrc
 
 %changelog
 
