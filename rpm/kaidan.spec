@@ -1,5 +1,7 @@
 %global qt_version 5.15.9
 %global kf5_version 5.106.0
+%global __requires_exclude ^libQXmppQt5|libQXmppOmemoQt5|libqca-qt5.*$
+%global __provides_exclude ^libQXmppQt5|libQXmppOmemoQt5|libqca-qt5.*$
 
 Name:           kaidan
 Version:        0.9.0
@@ -10,7 +12,6 @@ URL:            https://www.kaidan.im
 Source:         kaidan-%{version}.tar.xz
 Source2:        org.kde.kaidan.png
 
-%define __requires_exclude ^libQXmppQt5|libQXmppOmemoQt5|libqca-qt5.*$
 
 # PATCH-FIX-UPSTREAM
 #Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
