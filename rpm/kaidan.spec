@@ -35,7 +35,7 @@ BuildRequires:  opt-qca-qt5-devel
 BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-kirigami2-devel
 BuildRequires:  opt-kf5-kirigami-addons-dateandtime
-BuildRequires:  opt-kf5-knotifications
+BuildRequires:  opt-kf5-knotifications-devel
 BuildRequires:  opt-qt5-qtdeclarative-devel
 BuildRequires:  opt-qt5-qtquickcontrols2-devel
 BuildRequires:  opt-qt5-qtsvg-devel
@@ -55,6 +55,7 @@ BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 
 Requires:       opt-kf5-kquickimageeditor
+BuildRequires:  opt-kf5-knotifications
 Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-kconfig-gui
 Requires:       opt-kf5-kirigami2
