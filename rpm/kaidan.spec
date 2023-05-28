@@ -24,26 +24,25 @@ Source2:        org.kde.kaidan.png
 # SFOS
 Patch3:         0001-remove-qq2-desktop-style.patch
 
+BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.3
 BuildRequires:  extra-cmake-modules >= 5.40.0
-BuildRequires:  gcc-c++
 BuildRequires:  qt5-qttools-linguist
 BuildRequires:  opt-kf5-rpm-macros >= %{kf5_version}
+BuildRequires:  opt-qt5-qtbase-devel >= %{kf5_version}
+BuildRequires:  opt-qt5-qttools-devel >= %{kf5_version}
+BuildRequires:  opt-qt5-qtbase-gui >= %{kf5_version}
+BuildRequires:  opt-qca-qt5-devel >= %{kf5_version}
+
+BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-kirigami2-devel
 BuildRequires:  opt-kf5-kirigami-addons-dateandtime
-BuildRequires:  opt-kf5-rpm-macros
-BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-knotifications
 BuildRequires:  opt-qt5-qtdeclarative-devel
 BuildRequires:  opt-qt5-qtquickcontrols2-devel
-BuildRequires:  opt-qt5-qtbase-devel
-BuildRequires:  opt-qt5-qttools-devel
-BuildRequires:  opt-qt5-qtbase-gui
-BuildRequires:  opt-qca-qt5-devel
 BuildRequires:  opt-qt5-qtsvg-devel
 BuildRequires:  opt-qt5-qtmultimedia-devel
 BuildRequires:  opt-qt5-qtlocation-devel
-BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue2
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 BuildRequires:  opt-qt5-qtlocation-pos-positionpoll
@@ -55,7 +54,7 @@ BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
 BuildRequires:  opt-kf5-kquickimageeditor-devel
 BuildRequires:  opt-kf5-libqxmpp-devel
-Requires:       libomemo-c
+BuildRequires:  zxing-cpp-devel
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires:       opt-kf5-kquickimageeditor
@@ -64,10 +63,14 @@ Requires:       opt-kf5-kconfig-gui
 Requires:       opt-kf5-kirigami2
 Requires:       opt-kf5-kirigami-addons
 Requires:       opt-kf5-kcoreaddons
-Requires:       qt-runner
 Requires:       opt-kf5-libqxmpp 
 Requires:       opt-qt5-qtmultimedia
 Requires:       opt-qt5-qtlocation
+Requires:       opt-qt5-qtlocation-pos-geoclue2
+Requires:       opt-qt5-qtlocation-pos-geoclue
+Requires:       opt-qt5-qtlocation-pos-positionpoll
+Requires:       qt-runner
+Requires:       libomemo-c
 
 %description
 Kaidan is a simple Jabber/XMPP client providing a user-interface using
