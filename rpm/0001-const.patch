@@ -1,0 +1,108 @@
+diff --git a/src/Message.h b/src/Message.h
+index c86564b4..187e84a2 100644
+--- a/src/Message.h
++++ b/src/Message.h
+@@ -54,7 +54,7 @@ struct FileHash
+ 
+ 	QXmppHash toQXmpp() const;
+ 
+-	bool operator==(const FileHash &other) const = default;
++	bool operator==(const FileHash &other) const ;
+ };
+ 
+ struct HttpSource
+@@ -64,7 +64,7 @@ struct HttpSource
+ 
+ 	QXmppHttpFileSource toQXmpp() const;
+ 
+-	bool operator==(const HttpSource &other) const = default;
++	bool operator==(const HttpSource &other) const ;
+ };
+ 
+ struct EncryptedSource
+@@ -79,7 +79,7 @@ struct EncryptedSource
+ 
+ 	QXmppEncryptedFileSource toQXmpp() const;
+ 
+-	bool operator==(const EncryptedSource &other) const = default;
++	bool operator==(const EncryptedSource &other) const ;
+ };
+ 
+ struct File
+@@ -118,7 +118,7 @@ public:
+ 
+ 	[[nodiscard]] QXmppFileShare toQXmpp() const;
+ 
+-	bool operator==(const File &other) const = default;
++	bool operator==(const File &other) const ;
+ 
+ private:
+ 	[[nodiscard]] QString _name() const { return name.value_or(QString()); }
+@@ -140,7 +140,7 @@ struct MessageReaction
+ 	QDateTime latestTimestamp;
+ 	QVector<QString> emojis;
+ 
+-	bool operator==(const MessageReaction &other) const = default;
++	bool operator==(const MessageReaction &other) const ;
+ };
+ 
+ /**
+@@ -157,8 +157,8 @@ public:
+ 	 * Compares another @c Message with this. Only attributes that are saved in the
+ 	 * database are checked.
+ 	 */
+-	bool operator==(const Message &m) const = default;
+-	bool operator!=(const Message &m) const = default;
++	bool operator==(const Message &m) const ;
++	bool operator!=(const Message &m) const ;
+ 
+ 	QString id;
+ 	QString to;
+diff --git a/src/PublicGroupChat.h b/src/PublicGroupChat.h
+index 142988ff..c0f4fb71 100644
+--- a/src/PublicGroupChat.h
++++ b/src/PublicGroupChat.h
+@@ -31,7 +31,7 @@ public:
+ 
+ 	explicit PublicGroupChat(const QJsonObject &object);
+ 	PublicGroupChat(const PublicGroupChat &other);
+-	PublicGroupChat() = default;
++	PublicGroupChat() ;
+ 
+ 	const QString &address() const;
+ 	void setAddress(const QString &address);
+@@ -52,8 +52,8 @@ public:
+ 	void setLanguages(const QStringList &languages);
+ 
+ 	PublicGroupChat &operator=(const PublicGroupChat &other);
+-	bool operator==(const PublicGroupChat &other) const = default;
+-	bool operator!=(const PublicGroupChat &other) const = default;
++	bool operator==(const PublicGroupChat &other) const ;
++	bool operator!=(const PublicGroupChat &other) const ;
+ 
+ 	QJsonObject toJson() const;
+ 
+diff --git a/src/RosterItem.h b/src/RosterItem.h
+index ef1b4d7f..ee756f07 100644
+--- a/src/RosterItem.h
++++ b/src/RosterItem.h
+@@ -51,7 +51,7 @@ public:
+ 	Q_PROPERTY(bool chatStateSendingEnabled MEMBER chatStateSendingEnabled)
+ 	Q_PROPERTY(bool readMarkerSendingEnabled MEMBER readMarkerSendingEnabled)
+ 
+-	RosterItem() = default;
++	RosterItem() ;
+ 	RosterItem(const QXmppRosterIq::Item &item, const QDateTime &dateTime = QDateTime::currentDateTimeUtc());
+ 
+ 	QString displayName() const;
+@@ -59,8 +59,8 @@ public:
+ 	bool isSendingPresence() const;
+ 	bool isReceivingPresence() const;
+ 
+-	bool operator==(const RosterItem &other) const = default;
+-	bool operator!=(const RosterItem &other) const = default;
++	bool operator==(const RosterItem &other) const ;
++	bool operator!=(const RosterItem &other) const ;
+ 
+ 	bool operator<(const RosterItem &other) const;
+ 	bool operator>(const RosterItem &other) const;

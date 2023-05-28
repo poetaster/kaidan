@@ -21,7 +21,8 @@ Source2:        org.kde.kaidan.png
 # PATCH-FIX-UPSTREAM
 #Patch2:         0001-Support-ZXing-2.0.patch
 # SFOS
-Patch3:         0001-remove-qq2-desktop-style.patch
+Patch0:         0001-const.patch
+Patch1:         0001-remove-qq2-desktop-style.patch
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.3
