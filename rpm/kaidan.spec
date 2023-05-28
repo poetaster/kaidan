@@ -90,7 +90,7 @@ pushd build
 		-DKDE_INSTALL_BINDIR:PATH=/usr/bin \
 		-DCMAKE_INSTALL_PREFIX:PATH=/usr/ \
         -DI18N:BOOL=ON \
-        -DQUICK_COMPILER:BOOL=ON
+        -DQUICK_COMPILER:BOOL=OFF
 
 %make_build
 popd
