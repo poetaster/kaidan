@@ -1,9 +1,8 @@
 %global qt_version 5.15.9
 %global kf5_version 5.106.0
 %global __requires_exclude ^libqxmpp.*$
-%global __provides_exclude ^libqxmpp.*$
 %global __requires_exclude ^libQXmppOmemo.*$
-%global __provides_exclude ^libQXmppOmemo.*$
+%global __requires_exclude ^libqca-qt5.*$
 
 Name:           kaidan
 Version:        0.9.0
@@ -33,7 +32,6 @@ BuildRequires:  opt-qt5-qtbase-devel
 BuildRequires:  opt-qt5-qttools-devel 
 BuildRequires:  opt-qt5-qtbase-gui 
 BuildRequires:  opt-qca-qt5-devel 
-
 BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-kirigami2-devel
 BuildRequires:  opt-kf5-kirigami-addons-dateandtime
@@ -56,7 +54,6 @@ BuildRequires:  opt-kf5-kquickimageeditor-devel
 BuildRequires:  opt-kf5-libqxmpp-devel
 BuildRequires:  zxing-cpp-devel
 
-%{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires:       opt-kf5-kquickimageeditor
 Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-kconfig-gui
@@ -72,6 +69,7 @@ Requires:       opt-qt5-qtlocation-pos-positionpoll
 Requires:       qt-runner
 Requires:       libomemo-c
 
+%{?opt_kf5_default_filter}
 %description
 Kaidan is a simple Jabber/XMPP client providing a user-interface using
 Kirigami and QtQuick. The back-end of Kaidan is entirely written in C++
