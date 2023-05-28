@@ -114,10 +114,10 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/im.kaidan.kaidan.desktop
 %{_datadir}/hicolor/*/apps/%{name}.*
 %{_datadir}/locale/
-%{_opt_kf5_appstreamdir}/im.kaidan.kaidan.appdata.xml
-%{_opt_kf5_notifydir}/kaidan.notifyrc
-%{_opt_kf5_sharedir}/%{name}/images
-%{_opt_kf5_sharedir}/%{name}/servers.json
+%{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
+/opt/qt5/share/knotifications5/kaidan.notifyrc
+%{_opt_kf5_datadir}/%{name}/images
+%{_opt_kf5_datadir}/%{name}/servers.json
 
 %changelog
 
