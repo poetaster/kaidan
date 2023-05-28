@@ -104,8 +104,6 @@ pushd build
 make DESTDIR=%{buildroot} install
 popd
 
-%find_lang %{name} --all-name
-
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications/ %{buildroot}/%{_datadir}/applications/im.kaidan.kaidan.desktop
 
 install -p -m644 -D %{SOURCE2} \
@@ -123,7 +121,6 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/%{name}/servers.json
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
 %{_opt_kf5_datadir}/knotifications5/kaidan.notifyrc
-%{_opt_kf5_datadir}/locale/
 
 %changelog
 
