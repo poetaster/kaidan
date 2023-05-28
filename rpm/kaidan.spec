@@ -107,20 +107,20 @@ popd
 desktop-file-install --dir=%{buildroot}%{_datadir}/applications/ %{buildroot}/%{_datadir}/applications/im.kaidan.kaidan.desktop
 
 install -p -m644 -D %{SOURCE2} \
-	%{buildroot}/%{_datadir}/icons/hicolor/256x256/apps/org.kde.%{name}.png
+	%{buildroot}/%{_datadir}/icons/hicolor/128x128/apps/im.kaidan.kaidan.png
 
 %files
 %license LICENSE
 %doc README.md NEWS
-%dir %{_opt_kf5_sharedir}/%{name}
+%dir %{_opt_kf5_datadir}/%{name}
 %{_bindir}/%{name}
 %{_datadir}/applications/im.kaidan.kaidan.desktop
-%{_datadir}/hicolor/128x128/apps/kaidan.png
+%{_datadir}/hicolor/128x128/apps/im.kaidan.kaidan.png
+%{_datadir}/%{name}/images
+%{_datadir}/%{name}/servers.json
 %{_datadir}/locale/
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
 %{_opt_kf5_datadir}/knotifications5/kaidan.notifyrc
-%{_opt_kf5_datadir}/%{name}/images
-%{_opt_kf5_datadir}/%{name}/servers.json
 
 %changelog
 
