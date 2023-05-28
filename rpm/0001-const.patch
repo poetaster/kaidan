@@ -7,7 +7,7 @@ index c86564b4..187e84a2 100644
  	QXmppHash toQXmpp() const;
  
 -	bool operator==(const FileHash &other) const = default;
-+	bool operator==(const FileHash &other) const =0;
++	bool operator==(const FileHash &other) const ;
  };
  
  struct HttpSource
@@ -16,7 +16,7 @@ index c86564b4..187e84a2 100644
  	QXmppHttpFileSource toQXmpp() const;
  
 -	bool operator==(const HttpSource &other) const = default;
-+	bool operator==(const HttpSource &other) const =0;
++	bool operator==(const HttpSource &other) const ;
  };
  
  struct EncryptedSource
@@ -25,7 +25,7 @@ index c86564b4..187e84a2 100644
  	QXmppEncryptedFileSource toQXmpp() const;
  
 -	bool operator==(const EncryptedSource &other) const = default;
-+	bool operator==(const EncryptedSource &other) const =0;
++	bool operator==(const EncryptedSource &other) const ;
  };
  
  struct File
@@ -34,7 +34,7 @@ index c86564b4..187e84a2 100644
  	[[nodiscard]] QXmppFileShare toQXmpp() const;
  
 -	bool operator==(const File &other) const = default;
-+	bool operator==(const File &other) const =0;
++	bool operator==(const File &other) const ;
  
  private:
  	[[nodiscard]] QString _name() const { return name.value_or(QString()); }
@@ -43,7 +43,7 @@ index c86564b4..187e84a2 100644
  	QVector<QString> emojis;
  
 -	bool operator==(const MessageReaction &other) const = default;
-+	bool operator==(const MessageReaction &other) const =0;
++	bool operator==(const MessageReaction &other) const ;
  };
  
  /**
@@ -53,8 +53,8 @@ index c86564b4..187e84a2 100644
  	 */
 -	bool operator==(const Message &m) const = default;
 -	bool operator!=(const Message &m) const = default;
-+	bool operator==(const Message &m) const =0;
-+	bool operator!=(const Message &m) const =0;
++	bool operator==(const Message &m) const ;
++	bool operator!=(const Message &m) const ;
  
  	QString id;
  	QString to;
@@ -77,8 +77,8 @@ index 142988ff..c0f4fb71 100644
  	PublicGroupChat &operator=(const PublicGroupChat &other);
 -	bool operator==(const PublicGroupChat &other) const = default;
 -	bool operator!=(const PublicGroupChat &other) const = default;
-+	bool operator==(const PublicGroupChat &other) const =0;
-+	bool operator!=(const PublicGroupChat &other) const =0;
++	bool operator==(const PublicGroupChat &other) const ;
++	bool operator!=(const PublicGroupChat &other) const ;
  
  	QJsonObject toJson() const;
  
@@ -101,8 +101,8 @@ index ef1b4d7f..ee756f07 100644
  
 -	bool operator==(const RosterItem &other) const = default;
 -	bool operator!=(const RosterItem &other) const = default;
-+	bool operator==(const RosterItem &other) const =0;
-+	bool operator!=(const RosterItem &other) const =0;
++	bool operator==(const RosterItem &other) const ;
++	bool operator!=(const RosterItem &other) const ;
  
  	bool operator<(const RosterItem &other) const;
  	bool operator>(const RosterItem &other) const;
