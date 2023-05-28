@@ -101,7 +101,7 @@ pushd build
 make DESTDIR=%{buildroot} install
 popd
 
-desktop-file-install --dir=%{buildroot}%{_datadir}/applications/ %{buildroot}/%{_datadir}/applications/org.kde.%{name}.desktop
+desktop-file-install --dir=%{buildroot}%{_datadir}/applications/ %{buildroot}/%{_datadir}/applications/im.kaidan.kaidan.desktop
 
 install -p -m644 -D %{SOURCE2} \
 	%{buildroot}/%{_datadir}/icons/hicolor/256x256/apps/org.kde.%{name}.png
@@ -110,10 +110,11 @@ install -p -m644 -D %{SOURCE2} \
 %license LICENSE
 %doc README.md NEWS
 %dir %{_opt_kf5_sharedir}/%{name}
-%{_opt_kf5_applicationsdir}/im.kaidan.kaidan.desktop
+%{_bindir}/%{name}
+%{_datadir}/im.kaidan.kaidan.desktop
+%{_datadir}/hicolor/*/apps/%{name}.*
+%{_datadir}/locale/
 %{_opt_kf5_appstreamdir}/im.kaidan.kaidan.appdata.xml
-%{_opt_kf5_bindir}/%{name}
-%{_opt_kf5_iconsdir}/hicolor/*/apps/%{name}.*
 %{_opt_kf5_notifydir}/kaidan.notifyrc
 %{_opt_kf5_sharedir}/%{name}/images
 %{_opt_kf5_sharedir}/%{name}/servers.json
