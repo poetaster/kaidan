@@ -1,7 +1,9 @@
 %global qt_version 5.15.9
 %global kf5_version 5.106.0
-%global __requires_exclude ^libQXmppQt5|libQXmppOmemoQt5|libqca-qt5.*$
-%global __provides_exclude ^libQXmppQt5|libQXmppOmemoQt5|libqca-qt5.*$
+%global __requires_exclude ^libqxmpp\\.*$
+%global __provides_exclude ^libqxmpp\\.*$
+%global __requires_exclude ^libQXmppOmemo\\.*$
+%global __provides_exclude ^libQXmppOmemo\\.*$
 
 Name:           kaidan
 Version:        0.9.0
@@ -53,6 +55,7 @@ BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
 BuildRequires:  opt-kf5-kquickimageeditor-devel
 BuildRequires:  opt-kf5-libqxmpp-devel
+Requires:       libomemo-c
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 Requires:       opt-kf5-kquickimageeditor
