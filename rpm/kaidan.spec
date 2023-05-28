@@ -120,7 +120,7 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/%{name}/images
 %{_datadir}/%{name}/servers.json
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
-%{_opt_kf5_datadir}/knotifications5/kaidan.notifyrc
+%{_datadir}/%{name}/kaidan.notifyrc
 
 %changelog
 
