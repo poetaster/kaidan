@@ -51,7 +51,7 @@ BuildRequires:  opt-kf5-kcoreaddons-devel
 BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel
 BuildRequires:  opt-kf5-kquickimageeditor-devel
-BuildRequires:  opt-kf5-libqxmpp-devel
+BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 
 Requires:       opt-kf5-kquickimageeditor
