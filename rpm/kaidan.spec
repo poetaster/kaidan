@@ -22,7 +22,9 @@ Source2:        org.kde.kaidan.png
 #Patch2:         0001-Support-ZXing-2.0.patch
 # SFOS
 Patch0:          0001-remove-qq2-desktop-style.patch
-#Patch1:         0001-const.patch
+Patch1:          0002-desktop-qtrunner.patch
+
+%{?opt_kf5_default_filter}
 
 BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.3
@@ -71,7 +73,8 @@ Requires:       opt-qt5-qtlocation-pos-positionpoll
 Requires:       qt-runner
 Requires:       libomemo-c
 
-%{?opt_kf5_default_filter}
+%{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
+
 %description
 Kaidan is a simple Jabber/XMPP client providing a user-interface using
 Kirigami and QtQuick. The back-end of Kaidan is entirely written in C++
@@ -111,11 +114,11 @@ install -p -m644 -D %{SOURCE2} \
 %doc README.md NEWS
 %dir %{_opt_kf5_sharedir}/%{name}
 %{_bindir}/%{name}
-%{_datadir}/im.kaidan.kaidan.desktop
-%{_datadir}/hicolor/*/apps/%{name}.*
+%{_datadir}/applications/im.kaidan.kaidan.desktop
+%{_datadir}/hicolor/128x128/apps/kaidan.png
 %{_datadir}/locale/
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
-/opt/qt5/share/knotifications5/kaidan.notifyrc
+%{_opt_kf5_datadir}/knotifications5/kaidan.notifyrc
 %{_opt_kf5_datadir}/%{name}/images
 %{_opt_kf5_datadir}/%{name}/servers.json
 
