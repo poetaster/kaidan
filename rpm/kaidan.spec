@@ -1,9 +1,9 @@
 %global qt_version 5.15.9
 %global kf5_version 5.106.0
-%global __requires_exclude ^libqxmpp\\.*$
-%global __provides_exclude ^libqxmpp\\.*$
-%global __requires_exclude ^libQXmppOmemo\\.*$
-%global __provides_exclude ^libQXmppOmemo\\.*$
+%global __requires_exclude ^libqxmpp.*$
+%global __provides_exclude ^libqxmpp.*$
+%global __requires_exclude ^libQXmppOmemo.*$
+%global __provides_exclude ^libQXmppOmemo.*$
 
 Name:           kaidan
 Version:        0.9.0
@@ -28,11 +28,11 @@ BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.3
 BuildRequires:  extra-cmake-modules >= 5.40.0
 BuildRequires:  qt5-qttools-linguist
-BuildRequires:  opt-kf5-rpm-macros >= %{kf5_version}
-BuildRequires:  opt-qt5-qtbase-devel >= %{kf5_version}
-BuildRequires:  opt-qt5-qttools-devel >= %{kf5_version}
-BuildRequires:  opt-qt5-qtbase-gui >= %{kf5_version}
-BuildRequires:  opt-qca-qt5-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-rpm-macros 
+BuildRequires:  opt-qt5-qtbase-devel 
+BuildRequires:  opt-qt5-qttools-devel 
+BuildRequires:  opt-qt5-qtbase-gui 
+BuildRequires:  opt-qca-qt5-devel 
 
 BuildRequires:  qqc2-breeze-style
 BuildRequires:  opt-kf5-kirigami2-devel
