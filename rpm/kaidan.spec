@@ -61,11 +61,9 @@ BuildRequires:  opt-qca-qt5-devel
 %global __requires_exclude ^libqxmpp.*$
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 
-Requires:       opt-qt5-qtdeclarative
-Requires:       opt-qt5-qtquickcontrols2
-Requires:       opt-kf5-kconfig-gui >= %{kf5_version}
 Requires:       opt-kf5-kirigami2 >= %{kf5_version}
 Requires:       opt-kf5-kirigami-addons >= %{kf5_version}
+Requires:       opt-kf5-kquickimageeditor-imports 
 Requires:       opt-kf5-kcoreaddons >= %{kf5_version}
 Requires:       opt-kf5-knotifications >= %{kf5_version}
 Requires:       opt-qt5-qtmultimedia
@@ -73,6 +71,7 @@ Requires:       opt-qt5-qtlocation
 Requires:       opt-qt5-qtlocation-pos-geoclue2
 Requires:       opt-qt5-qtlocation-pos-geoclue
 Requires:       opt-qt5-qtlocation-pos-positionpoll
+Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-libqxmpp 
 Requires:       qt-runner
 Requires:       libomemo-c
