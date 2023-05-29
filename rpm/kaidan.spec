@@ -27,15 +27,10 @@ BuildRequires:  gcc-c++
 BuildRequires:  cmake >= 3.3
 BuildRequires:  extra-cmake-modules >= 5.40.0
 BuildRequires:  qt5-qttools-linguist
-BuildRequires:  opt-kf5-rpm-macros 
-BuildRequires:  opt-qt5-qtbase-devel 
+BuildRequires:  opt-kf5-rpm-macros >= %{kf5_version}
+BuildRequires:  opt-qt5-qtbase-devel  
 BuildRequires:  opt-qt5-qttools-devel 
 BuildRequires:  opt-qt5-qtbase-gui 
-BuildRequires:  opt-qca-qt5-devel 
-BuildRequires:  qqc2-breeze-style
-BuildRequires:  opt-kf5-kirigami2-devel
-BuildRequires:  opt-kf5-kirigami-addons-dateandtime
-BuildRequires:  opt-kf5-knotifications-devel
 BuildRequires:  opt-qt5-qtdeclarative-devel
 BuildRequires:  opt-qt5-qtquickcontrols2-devel
 BuildRequires:  opt-qt5-qtsvg-devel
@@ -44,26 +39,34 @@ BuildRequires:  opt-qt5-qtlocation-devel
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue2
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 BuildRequires:  opt-qt5-qtlocation-pos-positionpoll
-BuildRequires:  opt-kf5-kcodecs-devel
-BuildRequires:  opt-kf5-kio-devel
-BuildRequires:  opt-kf5-kconfig-devel
-BuildRequires:  opt-kf5-kcoreaddons-devel
-BuildRequires:  opt-kf5-ki18n-devel
-BuildRequires:  opt-kf5-kitemmodels-devel
-BuildRequires:  opt-kf5-kquickimageeditor-devel
+BuildRequires:  qqc2-breeze-style
+BuildRequires:  opt-kf5-kcoreaddons-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kdbusaddons-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kservice-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-knotifications-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kirigami2-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kirigami-addons-dateandtime >= %{kf5_version}
+BuildRequires:  opt-kf5-kcodecs-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kio-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kconfig-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-ki18n-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kitemmodels-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kquickimageeditor-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
+BuildRequires:  opt-qca-qt5-devel 
 
-Requires:       opt-kf5-kconfig-gui
-Requires:       opt-kf5-kirigami2
-Requires:       opt-kf5-kirigami-addons
-Requires:       opt-kf5-kcoreaddons
-Requires:       opt-kf5-libqxmpp 
+Requires:       opt-kf5-kconfig-gui >= %{kf5_version}
+Requires:       opt-kf5-kirigami2 >= %{kf5_version}
+Requires:       opt-kf5-kirigami-addons >= %{kf5_version}
+Requires:       opt-kf5-kcoreaddons >= %{kf5_version}
+Requires:       opt-kf5-knotifications >= %{kf5_version}
 Requires:       opt-qt5-qtmultimedia
 Requires:       opt-qt5-qtlocation
 Requires:       opt-qt5-qtlocation-pos-geoclue2
 Requires:       opt-qt5-qtlocation-pos-geoclue
 Requires:       opt-qt5-qtlocation-pos-positionpoll
+Requires:       opt-kf5-libqxmpp 
 Requires:       qt-runner
 Requires:       libomemo-c
 
