@@ -50,7 +50,6 @@ BuildRequires:  opt-kf5-kio-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kconfig-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-ki18n-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kitemmodels-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kquickimageeditor 
 BuildRequires:  opt-kf5-kquickimageeditor-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-imports 
 BuildRequires:  opt-kf5-libqxmpp
