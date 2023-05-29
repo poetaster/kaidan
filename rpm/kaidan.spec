@@ -54,9 +54,6 @@ BuildRequires:  opt-kf5-kquickimageeditor-devel
 BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 
-Requires:       opt-kf5-kquickimageeditor
-Requires:       opt-kf5-knotifications
-Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-kconfig-gui
 Requires:       opt-kf5-kirigami2
 Requires:       opt-kf5-kirigami-addons
