@@ -1,8 +1,5 @@
 %global qt_version 5.15.9
 %global kf5_version 5.106.0
-%global __requires_exclude ^libqxmpp.*$
-%global __requires_exclude ^libQXmppOmemo.*$
-%global __requires_exclude ^libqca-qt5.*$
 
 Name:           kaidan
 Version:        0.8.0
@@ -58,7 +55,7 @@ BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 
 Requires:       opt-kf5-kquickimageeditor
-BuildRequires:  opt-kf5-knotifications
+Requires:       opt-kf5-knotifications
 Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-kconfig-gui
 Requires:       opt-kf5-kirigami2
@@ -72,6 +69,10 @@ Requires:       opt-qt5-qtlocation-pos-geoclue
 Requires:       opt-qt5-qtlocation-pos-positionpoll
 Requires:       qt-runner
 Requires:       libomemo-c
+
+%global __requires_exclude ^libQXmppOmemo.*$
+%global __requires_exclude ^libqca-qt5.*$
+%global __requires_exclude ^libqxmpp.*$
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 
