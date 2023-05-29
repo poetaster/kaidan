@@ -45,13 +45,12 @@ BuildRequires:  opt-kf5-kdbusaddons-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kservice-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-knotifications-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kirigami2-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kirigami-addons-dateandtime >= %{kf5_version}
 BuildRequires:  opt-kf5-kcodecs-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kio-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kconfig-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-ki18n-devel >= %{kf5_version}
 BuildRequires:  opt-kf5-kitemmodels-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kquickimageeditor-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kquickimageeditor >= %{kf5_version}
 BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qca-qt5-devel 
