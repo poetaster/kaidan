@@ -7,6 +7,9 @@ URL:            https://www.kaidan.im
 Source:         kaidan-%{version}.tar.xz
 Source2:        org.kde.kaidan.png
 
+%global __requires_exclude ^libqxmpp.*$
+%global __requires_exclude ^libQXmppOmemo.*$
+%global __requires_exclude ^libqca-qt5.*$
 
 # PATCH-FIX-UPSTREAM
 #Patch0:         0001-QrCodeDecoder-Replace-deprecated-BarcodeFormat-QR_CO.patch
