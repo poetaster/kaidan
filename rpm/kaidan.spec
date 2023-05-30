@@ -58,28 +58,29 @@ BuildRequires:  opt-qca-qt5-devel
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 
-Requires: opt-kf5-kirigami2%{_isa} 
-Requires: opt-qt5-qtwayland%{_isa}
-Requires: opt-kf5-kconfig-gui
-Requires: opt-kf5-kcoreaddons
-Requires: opt-kf5-kdbusaddons
-Requires: opt-kf5-ki18n
-Requires: opt-kf5-kirigami2
-Requires: opt-kf5-kirigami-addons
-Requires: opt-kf5-knotifications
-Requires: opt-kf5-kwindowsystem
-Requires: opt-qt5-qtbase-gui
-Requires: opt-qt5-qtmultimedia
-Requires: opt-qt5-qtquickcontrols2
-Requires: opt-qt5-qtsvg
-Requires: opt-qt5-qtwebengine
-Requires: opt-qt5-qtlocation
-Requires: qt-runner
-Requires: breeze-icons
+Requires:       opt-kf5-kirigami2%{_isa} 
+Requires:       opt-qt5-qtwayland%{_isa}
+Requires:       opt-kf5-kconfig-gui
+Requires:       opt-kf5-kcoreaddons
+Requires:       opt-kf5-kdbusaddons
+Requires:       opt-kf5-ki18n
+Requires:       opt-kf5-kirigami2
+Requires:       opt-kf5-kirigami-addons
+Requires:       opt-kf5-knotifications
+Requires:       opt-kf5-kwindowsystem
+Requires:       opt-qt5-qtbase-gui
+Requires:       opt-qt5-qtmultimedia
+Requires:       opt-qt5-qtquickcontrols%{?_isa}
+Requires:       opt-qt5-qtquickcontrols2%{?_isa}
+Requires:       opt-qt5-qtsvg
+Requires:       opt-qt5-qtwebengine
+Requires:       opt-qt5-qtlocation
+Requires:       qt-runner
+Requires:       breeze-icons
 
 Requires:       opt-kf5-kquickimageeditor-imports 
 Requires:       opt-qca-qt5
-Requires:       opt-kf5-libqxmpp 
+Requires:       opt-kf5-libqxmpp%{_isa}
 Requires:       libomemo-c
 
 %description
