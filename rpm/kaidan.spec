@@ -18,6 +18,10 @@ Source2:        org.kde.kaidan.png
 Patch0:          0001-remove-qq2-desktop-style.patch
 Patch1:          0002-desktop-qtrunner.patch
 
+%global __requires_exclude ^libQXmppOmemo.*$
+%global __requires_exclude ^libqca-qt5.*$
+%global __requires_exclude ^libqxmpp.*$
+
 %{?opt_kf5_default_filter}
 
 BuildRequires:  gcc-c++
@@ -54,10 +58,6 @@ BuildRequires:  opt-kf5-kquickimageeditor-imports
 BuildRequires:  opt-kf5-libqxmpp
 BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qca-qt5-devel 
-
-%global __requires_exclude ^libQXmppOmemo.*$
-%global __requires_exclude ^libqca-qt5.*$
-%global __requires_exclude ^libqxmpp.*$
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 
@@ -131,7 +131,6 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/%{name}/servers.json
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
 %{_datadir}/knotifications5/kaidan.notifyrc
-%{_datadir}/locale
 
 %changelog
 
