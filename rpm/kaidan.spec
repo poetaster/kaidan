@@ -18,10 +18,6 @@ Source2:        org.kde.kaidan.png
 Patch0:          0001-remove-qq2-desktop-style.patch
 Patch1:          0002-desktop-qtrunner.patch
 
-%global __requires_exclude ^libQXmppOmemo.*$
-%global __requires_exclude ^libqca-qt5.*$
-%global __requires_exclude ^libqxmpp.*$
-
 %{?opt_kf5_default_filter}
 
 BuildRequires:  gcc-c++
@@ -81,6 +77,7 @@ Requires: qt-runner
 Requires: breeze-icons
 
 Requires:       opt-kf5-kquickimageeditor-imports 
+Requires:       opt-qca-qt5
 Requires:       opt-kf5-libqxmpp 
 Requires:       libomemo-c
 
