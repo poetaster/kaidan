@@ -54,12 +54,13 @@ BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-imports 
-BuildRequires:  opt-kf5-libqxmpp
-BuildRequires:  opt-kf5-libqxmpp-devel
 BuildRequires:  zxing-cpp-devel
-BuildRequires:  opt-qca-qt5-devel 
+
 
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
+BuildRequires:  opt-kf5-libqxmpp
+BuildRequires:  opt-kf5-libqxmpp-devel
+BuildRequires:  opt-qca-qt5-devel 
 
 Requires:       opt-kf5-kirigami2%{_isa} 
 Requires:       opt-qt5-qtwayland%{_isa}
