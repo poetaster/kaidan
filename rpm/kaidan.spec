@@ -1,6 +1,3 @@
-%global qt_version 5.15.9
-%global kf5_version 5.106.0
-
 Name:           kaidan
 Version:        0.8.0
 Release:        0
@@ -39,17 +36,19 @@ BuildRequires:  opt-qt5-qtlocation-devel
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue2
 BuildRequires:  opt-qt5-qtlocation-pos-geoclue
 BuildRequires:  opt-qt5-qtlocation-pos-positionpoll
-BuildRequires:  qqc2-breeze-style
-BuildRequires:  opt-kf5-kcoreaddons-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kdbusaddons-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kservice-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-knotifications-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kirigami2-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kcodecs-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kio-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kconfig-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-ki18n-devel >= %{kf5_version}
-BuildRequires:  opt-kf5-kitemmodels-devel >= %{kf5_version}
+BuildRequires:  opt-kf5-kwindowsystem-devel
+BuildRequires:  opt-kf5-kirigami2-devel
+BuildRequires:  opt-kf5-kirigami-addons
+BuildRequires:  opt-kf5-kcoreaddons-devel 
+BuildRequires:  opt-kf5-kdbusaddons-devel 
+BuildRequires:  opt-kf5-ki18n-devel
+BuildRequires:  opt-kf5-kservice-devel 
+BuildRequires:  opt-kf5-knotifications-devel 
+BuildRequires:  opt-kf5-kcodecs-devel 
+BuildRequires:  opt-kf5-kio-devel 
+BuildRequires:  opt-kf5-kconfig-devel 
+BuildRequires:  opt-kf5-ki18n-devel 
+BuildRequires:  opt-kf5-kitemmodels-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-imports 
 BuildRequires:  opt-kf5-libqxmpp
@@ -59,21 +58,30 @@ BuildRequires:  opt-qca-qt5-devel
 %global __requires_exclude ^libQXmppOmemo.*$
 %global __requires_exclude ^libqca-qt5.*$
 %global __requires_exclude ^libqxmpp.*$
+
 %{?_opt_qt5:Requires: %{_opt_qt5}%{?_isa} = %{_opt_qt5_version}}
 
-Requires:       opt-kf5-kirigami2 >= %{kf5_version}
-Requires:       opt-kf5-kirigami-addons >= %{kf5_version}
+Requires: opt-kf5-kirigami2%{_isa} 
+Requires: opt-qt5-qtwayland%{_isa}
+Requires: opt-kf5-kconfig-gui
+Requires: opt-kf5-kcoreaddons
+Requires: opt-kf5-kdbusaddons
+Requires: opt-kf5-ki18n
+Requires: opt-kf5-kirigami2
+Requires: opt-kf5-kirigami-addons
+Requires: opt-kf5-knotifications
+Requires: opt-kf5-kwindowsystem
+Requires: opt-qt5-qtbase-gui
+Requires: opt-qt5-qtmultimedia
+Requires: opt-qt5-qtquickcontrols2
+Requires: opt-qt5-qtsvg
+Requires: opt-qt5-qtwebengine
+Requires: opt-qt5-qtlocation
+Requires: qt-runner
+Requires: breeze-icons
+
 Requires:       opt-kf5-kquickimageeditor-imports 
-Requires:       opt-kf5-kcoreaddons >= %{kf5_version}
-Requires:       opt-kf5-knotifications >= %{kf5_version}
-Requires:       opt-qt5-qtmultimedia
-Requires:       opt-qt5-qtlocation
-Requires:       opt-qt5-qtlocation-pos-geoclue2
-Requires:       opt-qt5-qtlocation-pos-geoclue
-Requires:       opt-qt5-qtlocation-pos-positionpoll
-Requires:       opt-qt5-qtquickcontrols2
 Requires:       opt-kf5-libqxmpp 
-Requires:       qt-runner
 Requires:       libomemo-c
 
 %description
@@ -123,6 +131,7 @@ install -p -m644 -D %{SOURCE2} \
 %{_datadir}/%{name}/servers.json
 %{_opt_kf5_metainfodir}/im.kaidan.kaidan.appdata.xml
 %{_datadir}/knotifications5/kaidan.notifyrc
+%{_datadir}/locale
 
 %changelog
 
