@@ -51,7 +51,7 @@ BuildRequires:  opt-kf5-ki18n-devel
 BuildRequires:  opt-kf5-kitemmodels-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-devel 
 BuildRequires:  opt-kf5-kquickimageeditor-imports 
-BuildRequires:  opt-kf5-libqxmpp
+BuildRequires:  libqxmpp
 BuildRequires:  opt-kf5-libqxmpp-devel
 BuildRequires:  zxing-cpp-devel
 BuildRequires:  opt-qca-qt5-devel 
@@ -79,7 +79,7 @@ Requires: breeze-icons
 
 Requires:       opt-kf5-kquickimageeditor-imports 
 Requires:       opt-qca-qt5
-Requires:       opt-kf5-libqxmpp 
+Requires:       libqxmpp 
 Requires:       libomemo-c
 
 %description
